@@ -1,6 +1,8 @@
 <script>
     const url = import.meta.env.VITE_BACKEND_URL;
-    let tools = []
+    export let data
+
+    let tools = data.tools
 
     let term = ''
 

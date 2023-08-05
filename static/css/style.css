@@ -18,7 +18,7 @@ body {
 
 .text-header-1 {
     font-size: 64px !important;
-    margin-top: 150px;
+    margin-top: 50px;
 }
 
 .text-header-2 {
@@ -87,7 +87,6 @@ body {
 
 .form-control {
     border-width: 1px !important;
-    border-color: #FFBF6E !important;
     min-height: 60px;
 }
 
@@ -318,7 +317,7 @@ a {
 
 .tool-title {
     padding-top: 20px;
-    height: 15%;
+    height: 20%;
     display: flex;
     align-content: center;
     align-items: center;
@@ -357,4 +356,28 @@ a {
     color: #FFBF6E;
     font-size: 15px;
     margin: 0 5px;
+}
+
+.hashtags {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    direction: rtl !important;
+}
+
+/* use the .hashtags a selector to style the hashtags */
+.hashtags a {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    color: #FFBF6E;
+    text-decoration: none;
+    font-weight: lighter;
+}
+
+/* use the .hashtags a:hover selector to add a hover effect */
+.hashtags a:hover {
+    text-decoration: underline;
 }

@@ -32,10 +32,10 @@
     </div>
     <div class="col-2"></div>
     <div class="col-2 text-center ">
-            {#if $page.data.user}
+            {#if $page.data.userD}
                 <a href="/panel" type="button" class="btn btn-base  btn-base-w100 ">پنل کاربری</a>
             {:else}
-                <a href="/panel" type="button" class="btn btn-base  btn-base-w100 ">ثبت نام / ورود</a>
+                <a href="/login" type="button" class="btn btn-base  btn-base-w100 ">ثبت نام / ورود</a>
             {/if}
 
     </div>
