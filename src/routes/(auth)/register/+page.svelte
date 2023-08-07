@@ -3,14 +3,19 @@
     //import {userData} from "$lib/stores/auth.js";
 
     import {goto} from "$app/navigation";
+    import {env} from "vite-plugin-env";
 
     let email = '';
     let password = '';
+    let password2 = '';
     let url = 'https://baseplate.iran.liara.run/'
-
+    //console.log($env.VITE_BACKEND_URL)
     async function handleSubmit() {
-
-        const response = await fetch(url+'api/auth/login/', {
+        if(password!==password2){
+            alert('گذرواژه برابر نیستند')
+            return
+        }
+        const response = await fetch(url+'api/auth/register/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -40,20 +45,24 @@
         <div class="col-md-6">
             <div class="card bg-transparent border-0 shadow-lg">
                 <div class="card-body p-4">
-                    <h3 class="text-center">🚪ورود به پنل</h3>
+                    <h3 class="text-center">🚪 ثبت نام</h3>
                     <form on:submit|preventDefault={handleSubmit}>
                         <div class="mb-3">
                             <label for="email" class="form-label">✉️ایمیل</label>
                             <input type="email" bind:value={email} id="email" class="form-control"
-                                   placeholder="Enter your email">
+                                   placeholder="example@mail.co" style="direction: ltr !important">
                         </div>
                         <div class="mb-3">
                             <label for="password" class="form-label">🔑گذرواژه</label>
                             <input type="password" bind:value={password} id="password" class="form-control"
-                                   placeholder="Enter your password">
+                                   placeholder="******" style="direction: ltr !important">
                         </div>
-                        <p>قطعا شما را به خاطر خواهیم سپرد 😜</p>
-                        <p class="mt-5"><a href="./register">ثبت نام کنید</a></p>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">🔑تکرار گذرواژه</label>
+                            <input type="password" bind:value={password2} id="password2" class="form-control"
+                                   placeholder="******" style="direction: ltr !important">
+                        </div>
+                        <p>خوش آمدید 😜</p>
                         <button type="submit" class="btn btn-primary w-100">ورود</button>
                     </form>
                 </div>

@@ -1,5 +1,9 @@
 <script>
-    const url = import.meta.env.VITE_BACKEND_URL;
+    import {page} from "$app/stores";
+
+    //const url = import.meta.env.VITE_BACKEND_URL;
+    let url = 'https://baseplate.iran.liara.run/'
+
     export let data
 
     let tools = data.tools
@@ -8,11 +12,34 @@
 
 
     const search = async () => {
-        let target = `${url}directory/tools/search/?term=${term}`;
+        let target = `${url}api/directory/tools/search/?term=${term}`;
         let result = await fetch(target)
         tools = await result.json()
 
     }
+
+    const like = async (id) => {
+
+        let res = await fetch(`${url}api/directory/tools/like/${id}/`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + $page.data.userD.token
+            },
+            body: JSON.stringify({
+                tool_id: id
+            })
+        })
+        if (res.status === 201) {
+            alert('liked 🤗')
+        }
+        if (res.status === 406) {
+            alert('unliked 🤭')
+        }
+
+        console.log(await res.json())
+    }
+
 
 </script>
 
@@ -33,7 +60,7 @@
     {#each tools as i}
 
         <div class="col-lg-3 col-sm-12 col-md-6">
-            <div class="tool-box">
+            <div class="tool-box"  on:click={()=>{like(i.id)}}>
                 <img alt="" class="tool-image" src="http://127.0.0.1:8000/{i.banner}"/>
 
                 <div class="tool-title">

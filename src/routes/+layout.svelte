@@ -1,5 +1,6 @@
 <script>
     import Nav from "$lib/wids/Nav.svelte";
+
 </script>
 
 <Nav />
