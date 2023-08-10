@@ -3,14 +3,17 @@
     //import {userData} from "$lib/stores/auth.js";
 
     import {goto} from "$app/navigation";
+    import {page} from "$app/stores";
+    //import {BACKEND_URL} from "$env/static/private";
 
     let email = '';
     let password = '';
     let url = 'https://baseplate.iran.liara.run/'
 
+    console.log($page.data.baseApiUrl)
     async function handleSubmit() {
 
-        const response = await fetch(url+'api/auth/login/', {
+        const response = await fetch($page.data.baseApiUrl + 'api/auth/login/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -45,12 +48,12 @@
                         <div class="mb-3">
                             <label for="email" class="form-label">✉️ایمیل</label>
                             <input type="email" bind:value={email} id="email" class="form-control"
-                                   placeholder="Enter your email">
+                                   placeholder="example@mail.co" style="direction: ltr !important">
                         </div>
                         <div class="mb-3">
                             <label for="password" class="form-label">🔑گذرواژه</label>
                             <input type="password" bind:value={password} id="password" class="form-control"
-                                   placeholder="Enter your password">
+                                   placeholder="******" style="direction: ltr !important">
                         </div>
                         <p>قطعا شما را به خاطر خواهیم سپرد 😜</p>
                         <p class="mt-5"><a href="./register">ثبت نام کنید</a></p>

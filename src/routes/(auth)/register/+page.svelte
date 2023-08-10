@@ -3,12 +3,12 @@
     //import {userData} from "$lib/stores/auth.js";
 
     import {goto} from "$app/navigation";
-    import {env} from "vite-plugin-env";
 
     let email = '';
     let password = '';
     let password2 = '';
     let url = 'https://baseplate.iran.liara.run/'
+    //console.log(import.meta.env.VITE_BACKEND_URL)
     //console.log($env.VITE_BACKEND_URL)
     async function handleSubmit() {
         if(password!==password2){
@@ -63,7 +63,7 @@
                                    placeholder="******" style="direction: ltr !important">
                         </div>
                         <p>خوش آمدید 😜</p>
-                        <button type="submit" class="btn btn-primary w-100">ورود</button>
+                        <button type="submit" class="btn btn-primary w-100">ثبت نام</button>
                     </form>
                 </div>
             </div>

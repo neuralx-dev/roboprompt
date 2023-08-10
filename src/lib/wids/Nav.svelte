@@ -2,47 +2,48 @@
     import {page} from "$app/stores";
 </script>
 
-<nav class="navbar">
-    <div class="col-1"></div>
+<nav class="navbar navbar-expand-lg navbar-dark ">
 
-    <div class="col-2">
-        <a class="navbar-brand text-white " href="./">
-            <img src="/images/toolbot.png" alt="Logo" width="150"
-                 class="d-inline-block align-text-top nav-logo">
+    <div class="container">
 
+        <a class="navbar-brand" href="#">
+            <img src="/images/toolbot.png" alt="Logo" width="150">
         </a>
 
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">تول بات</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">جستجو</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">بلاگ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">آموزش</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">درباره ما</a>
+                </li>
+            </ul>
+
+            <div class="d-flex">
+                {#if $page.data.userD}
+                    <a href="/panel" type="button" class="btn btn-base  btn-base-w100 ">پنل کاربری</a>
+                {:else}
+                    <a href="/login" type="button" class="btn btn-base  btn-base-w100 ">ثبت نام / ورود</a>
+                {/if}
+            </div>
+
+        </div>
+
     </div>
-    <div class="col-4 d-flex justify-content-center">
-        <ul class="nav">
 
-            <li class="nav-item">
-                <a class="nav-link " href="./">تول بات</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/browse">جستجو</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">بلاگ</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">آموزش</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link ">درباره ما</a>
-            </li>
-
-        </ul>
-    </div>
-    <div class="col-2"></div>
-    <div class="col-2 text-center ">
-        {#if $page.data.userD}
-            <a href="/panel" type="button" class="btn btn-base  btn-base-w100 ">پنل کاربری</a>
-        {:else}
-            <a href="/login" type="button" class="btn btn-base  btn-base-w100 ">ثبت نام / ورود</a>
-        {/if}
-
-    </div>
-    <div class="col-1"></div>
 </nav>

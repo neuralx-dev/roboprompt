@@ -1,10 +1,11 @@
-//import {BACKEND_URL} from "$env/static/private";
+import {env} from "$env/dynamic/public";
 
 export async function load({params}) {
 
     //console.log(process.env.BACKEND_URL)
     // Make a GET request to the API endpoint with the query parameter
-    const response = await fetch(process.env.BACKEND_URL + 'api/directory/tools/home/');
+    console.log(env.PUBLIC_BACKEND_URL)
+    const response = await fetch(env.PUBLIC_BACKEND_URL + 'api/directory/tools/home/');
 
     // Parse the response as JSON
     const page = await response.json();
