@@ -1,16 +1,13 @@
 <script>
 
     import {page} from "$app/stores";
-    import Tool from "$lib/wids/Tool.svelte";
 
     export let data;
     let tools = []
     let tags = []
     tools = data.tools
     tags = data.tags
-    console.log(data.tags)
 
-    console.log($page.data.baseApiUrl)
 
 </script>
 
@@ -37,21 +34,5 @@
 </div>
 
 
-<div class="row">
-    <div class="col-2"></div>
-    <div class="col-8">
-        <div class="searchbar">
-            <input class="search-input" type="text" name=""
-                   placeholder="جستجو در بین {data.count} ابزار هوش مصنوعی کاربردی برای کسب و کار ...">
-            <a href="#" class="search-icon"><i class="bi bi-search"></i></a>
-        </div>
-    </div>
-    <div class="col-2"></div>
-</div>
-<div class="row">
-    {#each tools as i}
 
-        <Tool tool={i}/>
-    {/each}
 
-</div>

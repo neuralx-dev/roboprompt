@@ -1,7 +1,6 @@
-# Tool-bot
+# Strarter project
 
 
-a persian directory for ai tools, made with sveltekit
 
 
 visit @neuralx_ir 
