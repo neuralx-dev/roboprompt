@@ -6,8 +6,8 @@
 
     <div class="container">
 
-        <a class="navbar-brand" href="#">
-            <img src="/images/toolbot.png" alt="Logo" width="150">
+        <a class="navbar-brand" href="/">
+            <img src="/images/logo.png" alt="Logo" width="150">
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,11 +18,9 @@
 
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">تول بات</a>
+                    <a class="nav-link" href="/">روبو پرامپت</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">جستجو</a>
-                </li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="#">بلاگ</a>
                 </li>
@@ -36,7 +34,8 @@
 
             <div class="d-flex">
                 {#if $page.data.userD}
-                    <a href="/panel" type="button" class="btn btn-base  btn-base-w100 ">پنل کاربری</a>
+                    <a href="/panel" type="button" class="btn btn-base   mx-1">پنل کاربری</a>
+                    <a href="/prompt/new" type="button" class="btn btn-base   mx-1">پرامپت +</a>
                 {:else}
                     <a href="/login" type="button" class="btn btn-base  btn-base-w100 ">ثبت نام / ورود</a>
                 {/if}

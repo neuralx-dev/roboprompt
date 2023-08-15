@@ -1,6 +1,6 @@
 {
   "platform": "node",
-  "app": "toolbot",
+  "app": "roboprompt",
   "port": 3000,
   "node": {
     "version": "18"

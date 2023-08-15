@@ -12,6 +12,10 @@ body {
     color: #FFBF6E !important;
 }
 
+.text-mine-pink {
+    color: #EA0B8C !important;
+}
+
 .text-mine-teal {
     color: #6CF5E9 !important;
 }
@@ -112,19 +116,45 @@ body {
 }
 
 .btn-outline-secondary {
-    border-color: #FFBF6E !important;
+    border-color: #fff !important;
     border-width: 2px !important;
-    color: #FFBF6E !important;
+    color: #fff !important;
     display: grid !important;
     align-content: center !important;
     text-align: center !important;
     height: 60px;
+
+}
+
+.btn-outline-primary {
+    border-color: #EA0B8C !important;
+    border-width: 2px !important;
+    color: #EA0B8C !important;
+}
+
+.right-rounded {
+    border-radius: 0 5px 5px 0 !important;
+}
+
+.left-rounded {
+    border-radius: 5px 0px 0px 5px !important;
 }
 
 .btn-outline-secondary:hover {
-    background-color: #FFBF6E !important;
+    background-color: rgba(255, 255, 255, 0.2) !important;
     color: white !important;
 
+}
+
+.btn-outline-primary:hover {
+    background-color: rgba(234, 11, 140, 0.38) !important;
+    color: white !important;
+
+}
+
+.btn-outline-primary:hover * {
+    color: white !important;
+    transition: color 0.2s;
 }
 
 .levels-row {
@@ -197,7 +227,8 @@ body {
 
 
 a {
-    color: #FFBF6E !important
+    text-decoration: none !important;
+    /*color: #FFBF6E !important*/
 }
 
 .selected-kws {
@@ -282,13 +313,13 @@ a {
     width: 60px;
     display: flex;
     float: right;
-    margin-top: 5px;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    font-size: 25px;
+    font-size: 20px;
     color: white;
     text-decoration: none;
+    margin-top: 20px !important;
 }
 
 .search-input::placeholder {
@@ -298,7 +329,7 @@ a {
 
 .tool-box {
     border-radius: 25px;
-    border-color: rgba(255,255,255,0.4);
+    border-color: rgba(255, 255, 255, 0.4);
     border-style: solid;
     border-width: 1px;
     height: 391px !important;
@@ -308,7 +339,7 @@ a {
 }
 
 
- .tool-image {
+.tool-image {
     height: 40%;
     width: 100%;
     border-radius: 25px;
@@ -334,7 +365,7 @@ a {
     margin: 10px;
 }
 
-.tool-short > p{
+.tool-short > p {
     font-size: 16px;
     line-height: 1.5;
     direction: ltr !important;
@@ -347,12 +378,13 @@ a {
     height: 20%;
     padding-bottom: 10px;
 }
+
 .tool-tags > * {
     color: #FFBF6E;
     direction: ltr !important;
 }
 
-.tag{
+.tag {
     color: #FFBF6E;
     font-size: 15px;
     margin: 0 5px;
@@ -379,5 +411,101 @@ a {
 
 /* use the .hashtags a:hover selector to add a hover effect */
 .hashtags a:hover {
-    text-decoration: underline;
+    /*text-decoration: underline;*/
+}
+
+
+.robot-white-shadow {
+    /* _7452f35d-d390-4540-9902-a635f507d92d-removebg-preview */
+    background: transparent !important;
+    -webkit-filter: drop-shadow(5px 5px 5px #666666);
+    filter: drop-shadow(0px 0 80px rgba(255, 255, 255, 0.3));
+}
+
+.search-div {
+    border-bottom-style: solid !important;
+    border-bottom-color: rgba(255, 255, 255, 0.4) !important;
+    border-bottom-width: 1px !important;
+
+    width: 100%;
+}
+
+.search-icon {
+    background: transparent !important;
+    border: none !important;
+}
+
+
+.prompt {
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    border-style: solid;
+    min-height: 250px;
+    padding: 10px !important;
+    position: relative;
+
+}
+
+.prompt > p {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    left: 10px;
+    font-weight: 600;
+}
+
+.prompt-props {
+    display: flex;
+    justify-content: space-between;
+}
+
+.prompt-header {
+
+}
+
+.prompt-desc {
+    width: 100% !important;
+}
+
+.ltr {
+    direction: ltr !important;
+}
+
+.rtl {
+    direction: rtl !important;
+}
+
+.right-border {
+    border-right-style: solid;
+    border-right-width: 2px;
+    border-right-color: white;
+}
+
+.prompt-title {
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(255, 255, 255, 0.4);
+
+}
+
+.ltr * {
+    direction: ltr !important;
+}
+
+.rtl * {
+    direction: rtl !important;
+}
+
+.comment-input::placeholder{
+    font-size: 14px;
+}
+
+.comment-item-right-border{
+    border-right-color: white;
+    border-right-width: 3px;
+    border-right-style: solid;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
 }
